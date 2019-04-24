@@ -9,13 +9,11 @@ sed -i "s/^search\ .*/search flossware\.com/" /etc/resolv.conf
 /etc/init.d/inetutils-inetd start
 /etc/init.d/nfs-common      start
 /etc/init.d/nis             start
-#/etc/init.d/autofs          start
 /etc/init.d/ssh             start
 /etc/init.d/cobblerd        start
 /etc/init.d/apache2         start
 #/etc/init.d/puppet-master   start
 /etc/init.d/tftpd-hpa       start
-#/etc/init.d/xinetd         start
 
 mount -a
 
@@ -26,13 +24,6 @@ mkdir -p /mnt/admin-ap/media
 mkdir -p /mnt/admin-ap/nas
 mkdir -p /mnt/admin-ap/shared
 mkdir -p /mnt/admin-ap/root
-
-mkdir -p /mnt/pi-01/amazon
-mkdir -p /mnt/pi-01/dropbox
-mkdir -p /mnt/pi-01/google
-mkdir -p /mnt/pi-01/microsoft
-mkdir -p /mnt/pi-01/pcloud
-mkdir -p /mnt/pi-01/cloud
 
 mkdir -p /mnt/redhat-laptop/etc
 mkdir -p /mnt/redhat-laptop/home
@@ -48,17 +39,8 @@ mount admin-ap:/opt/nas       /mnt/admin-ap/nas
 mount admin-ap:/opt/shared    /mnt/admin-ap/shared
 mount admin-ap:/root          /mnt/admin-ap/root
 
-mount pi-01:/mnt/amazon       /mnt/pi-01/amazon
-mount pi-01:/mnt/dropbox      /mnt/pi-01/dropbox
-mount pi-01:/mnt/google       /mnt/pi-01/google
-mount pi-01:/mnt/microsoft    /mnt/pi-01/microsoft
-mount pi-01:/mnt/pcloud       /mnt/pi-01/pcloud
-mount pi-01:/mnt/cloud        /mnt/pi-01/cloud
-
 mount redhat-laptop:/etc      /mnt/redhat-laptop/etc
 mount redhat-laptop:/home     /mnt/redhat-laptop/home
 mount redhat-laptop:/opt      /mnt/redhat-laptop/opt
 mount redhat-laptop:/root     /mnt/redhat-laptop/root
-
-#mount redhat-laptop:/mnt/localhost/usb /mnt/redhat-laptop/usb
 
